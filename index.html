@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictro Travels</title>
+    <!-- css style sheet -->
+     <link rel="stylesheet" href="/styles/style.css">
+     <!-- Daisy UI and tailwind -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     
+</head>
+<body>
+    <header class="w-full h-14 flex justify-center items-center">
+        <div class="navbar bg-base-100 w-full max-w-[1172px] mt-12">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-2xl font-bold">P-Travels</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-lime-200 text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="mt-12 w-full h-auto flex justify-center items-center ">
+            <div class="hero-section max-w-[1172px] max-h-[550px] rounded-2xl bg-[url('/images/banner.png')] bg-cover bg-center min-h-screen flex justify-center items-center text-white bg-[#03071280] flex-col gap-3">
+                <h1 class="font-bold text-8xl text-center px-4 raleway">End-to-End Travel with <span class="text-[#1DD100]">Pictro Travels</span></h1>
+            <p class="text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+            <button class="btn border-none bg-[#1DD100]">Buy Tickets</button>
+            </div>
+            
+        </section>
+        <!-- info section -->
+        <section class="container flex gap-4 justify-center mt-[-70px]">
+            <div class="flex gap-x-4 bg-[#FFFFFF] p-6 max-w-80 max-h-36 rounded-2xl border-b-2 border-[#1DD100]">
+                <img src="images/people.png" alt="">
+                <div>
+                    <h2 class="text-black font-bold text-2xl raleway">500k+</h2>
+                    <p class="text-[#03071299]">Registered users</p>
+                </div>
+            </div>
+            <div class="flex gap-x-4 bg-[#FFFFFF] p-6 max-w-80 max-h-36 rounded-2xl border-b-2 border-[#1DD100]">
+                <img src="images/ticket-cupon.png" alt="">
+                <div>
+                    <h2 class="text-black font-bold text-2xl raleway">1.7 lacks</h2>
+                    <p class="text-[#03071299]">Ticket sold</p>
+                </div>
+            </div>
+            <div class="flex gap-x-4 bg-[#FFFFFF] p-6 max-w-80 max-h-36 rounded-2xl border-b-2 border-[#1DD100]">
+                <img src="images/stoppage.png" alt="">
+                <div>
+                    <h2 class="text-black font-bold text-2xl raleway">80k+</h2>
+                    <p class="text-[#03071299]">Rental partners</p>
+                </div>
+            </div>
+        </section>
+        <!-- offer Sextion -->
+         <section class="grid grid-flow-row items-center justify-center gap-y-4">
+            <h2 class="text-black font-bold text-2xl raleway mt-11 mb-6">Best offers for you</h2>
+            <div>
+                <div class="flex rounded-2xl bg-[#FFBF0F]">
+                    <div class="p-6">
+                        <h2 class="text-black font-bold text-2xl raleway">15% OFF</h2>
+                        <p>on your next purchase <br> <span>use by January 2024</span></p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="p-6 grid grid-flow-row items-center justify-center gap-0">
+                        <p class=" text-[#030712] text-2xl font-bold raleway">NEW15</p>
+                        <p class="text-[#03071280] text-sm">Coupon Code</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h2 class="text-black font-bold text-2xl raleway">20% OFF</h2>
+                        <p>on your next purchase <span>use by January 2024</span></p>
+                        <img src="images/cupon-devider.png" alt="">
+                        <p>Couple 20 <span>Coupon Code</span></p>
+                    </div>
+                </div>
+            </div>
+         </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
