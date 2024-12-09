@@ -122,7 +122,7 @@
         </section>
         <!-- Travels section -->
          
-          <section class="w-full h-auto flex justify-center items-center">
+          <section id="travels" class="w-full h-auto flex justify-center items-center">
             <div class="w-full h-full bg-[#F7F8F8] rounded-2xl border-t-2 border-[#1DD100]">
                 <h2 class="text-black text-center font-bold text-2xl raleway mt-11 mb-3">Pictro Travels</h2>
                 <p class=" text-[#03071280] text-center text-sm  raleway">Yes, you can run unit tests and view the results directly within the app. <br>The integrated testing features allow for a streamlined .</p>
@@ -165,10 +165,10 @@
                     </div>
                 </div>
                 <!-- ticket section -->
-                 <div class="w-4/5 h-auto flex flex-col md:flex-row justify-center items-center bg-white mt-14 mx-auto  rounded-2xl p-4">
-                    <div class="w-3/5 border-dotted border-r border-gray-400">
-                        <h3>Select Your Seat</h3>
-                        <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-start p-4 ">
+                 <div class="w-4/5 h-auto flex flex-col md:flex-row justify-center items-center bg-white mt-14 mx-auto  rounded-2xl px-4 py-4">
+                    <div class="w-3/5 h-screen ">
+                        <h3 class="releway text-[#030712] text-xl font-semibold pt-8 md:pl-12 ml-4">Select Your Seat</h3>
+                        <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-start py-4 md:px-16">
                             <div class="flex gap-2">
                                 <img src="images/seat-gray.png" alt="">
                                 <p class="text-[#03071280]">Available</p>
@@ -178,40 +178,14 @@
                                 <p class="text-[#1DD100]">Selected</p>
                             </div>
                         </div>
-                        <div class="mr-4 flex justify-end">
+                        <div class="md:mr-16 flex justify-end">
                             <img src="images/stearing.jpg" alt="">
                         </div>
                         <!-- seat plan -->
-                         <div>
-                            <div>
-                                <div>
-                                    <button class="btn p-11">Button</button>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                </div>
-                                <div>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                </div>
-                                <div>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                    <button class="btn">Button</button>
-                                </div>
-                            </div>
-                         </div>
-                         <!--
-                         <div class="flex gap-3 mt-4">
-                            <div class="flex gap-1 w-1/2">
-                                <div class="w-24">
+                        
+                         <div class="flex justify-center items-center gap-6 px-9 mt-4">
+                            <div class="flex justify-center gap-4 w-1/2">
+                                <div class="w-24 flex flex-col gap-2">
                                     <kbd class="kbd">A1</kbd>
                                     <kbd class="kbd">B1</kbd>
                                     <kbd class="kbd">C1</kbd>
@@ -223,7 +197,7 @@
                                     <kbd class="kbd">I1</kbd>
                                     <kbd class="kbd">J1</kbd>
                                 </div>
-                                <div class="w-24">
+                                <div class="w-24 flex flex-col gap-2">
                                     <kbd class="kbd">A2</kbd>
                                     <kbd class="kbd">B2</kbd>
                                     <kbd class="kbd">C2</kbd>
@@ -236,8 +210,8 @@
                                     <kbd class="kbd">J2</kbd>
                                 </div>
                             </div>
-                            <div class="flex gap-1 w-1/2">
-                                <div>
+                            <div class="flex justify-center gap-4 w-1/2">
+                                <div class="w-24 flex flex-col gap-2">
                                     <kbd class="kbd">A3</kbd>
                                     <kbd class="kbd">B3</kbd>
                                     <kbd class="kbd">C3</kbd>
@@ -249,7 +223,7 @@
                                     <kbd class="kbd">I3</kbd>
                                     <kbd class="kbd">J3</kbd>
                                 </div>
-                                <div>
+                                <div class="w-24 flex flex-col gap-2">
                                     <kbd class="kbd">A4</kbd>
                                     <kbd class="kbd">B4</kbd>
                                     <kbd class="kbd">C4</kbd>
@@ -263,18 +237,61 @@
                                 </div>
                             </div>
                          </div>
-                           -->
                     </div>
                     <!-- ticket info -->
-                    <div class="w-2/5 bg-slate-400 ml-1">
-                        <h3>Select Your Seat</h3>
+                    <div class="w-2/5 bg-white ml-1">
+                        <h3 class="releway text-[#030712] text-xl font-semibold pt-8 ml-4">Select Your Seat</h3>
+                        <!-- ticket price section -->
+                        <div class="bg-[#F7F8F8] rounded-xl">
+                            <div class="overflow-x-auto">
+                                <table class="table text-center">
+                                  <!-- head -->
+                                  <thead>
+                                    <tr>
+                                      <th>Seat</th>
+                                      <th>Class</th>
+                                      <th>Price</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <!-- row 1 -->
+                                    <tr>
+                                      <td>A1</td>
+                                      <td>Economy</td>
+                                      <td>550</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="flex justify-between my-4 mx-11">
+                                    <p>Total Price</p>
+                                    <p>BDT <span>550</span></p>
+                                </div>
+                                <div class="flex justify-center">
+                                    <input class="px-7 rounded-lg" type="text" placeholder="Have you any coupon?"> <button class="btn bg-[#1DD100] text-white px-8">Apply</button>
+                                </div>
+                                <div class="flex justify-between my-4 mx-11">
+                                    <p>Grand Total</p>
+                                    <p>BDT <span>550</span></p>
+                                </div>
+                              </div>
+                        </div>
+                        <!-- passenger info section -->
+                        <div class="mt-6 mx-1">
+                            <p class="text-[#030712] font-semibold">Passenger Name*</p>
+                            <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="text" placeholder="Enter Your Nmae">
+                            <p class="text-[#030712] font-semibold">Phone Number*</p>
+                            <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="number" placeholder="Enter Your Phone number">
+                            <p class="text-[#030712] font-semibold">Email id</p>
+                            <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="email" placeholder="Enter Your Email">
+                            <button class="btn w-full bg-[#1DD100] text-white px-8">Next</button>
+                        </div>
                     </div>
                  </div>
             </div>
           </section>
          
     </main>
-    <footer class="text-center">
+    <footer class="text-center mt-32">
         <h2>Hello world</h2>
         <h2>Hello world</h2>
         <h2>Hello world</h2>
