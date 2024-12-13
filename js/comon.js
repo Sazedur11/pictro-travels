@@ -82,10 +82,6 @@ function handleClick(event){
         else{
             getGrandTotal.innerText = grandPrice;
         }
-        //get the phone number field
-        // const getPhoneNum = document.getElementById('phone-num');
-        // console.log(getPhoneNum.value)
-        getPhoneNum()
     }
 };
 
@@ -120,12 +116,13 @@ function actionNextBtn(){
 }
 
 //get phone num input
-function getPhoneNum(){
-    const getPhoneNum = document.getElementById('phone-num');
-    if(getPhoneNum.value.length == 11){
-        showNextBtn()
-    }
-};
+const getPhoneNum = document.getElementById('phone-num');
+getPhoneNum.addEventListener('input', ()=>{
+        if(getPhoneNum.value.length == 11){
+            showNextBtn()
+        }
+});
+
 //hide the main section
 function hideSection(){
     const header = document.getElementById('header');
