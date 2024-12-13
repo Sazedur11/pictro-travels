@@ -12,7 +12,7 @@
      
 </head>
 <body>
-    <header class="w-full h-14 flex justify-center items-center">
+    <header id="header" class="w-full h-14 flex justify-center items-center">
         <div class="navbar bg-base-100 w-full max-w-[1172px] mt-12">
             <div class="navbar-start">
               <div class="dropdown">
@@ -54,7 +54,7 @@
             </div>
           </div>
     </header>
-    <main>
+    <main id="main-section">
         <section class="mt-12 w-full h-auto flex justify-center items-center ">
             <div class="hero-section md:max-w-[1172px] md:max-h-[550px] md:min-h-screen rounded-2xl bg-[url('/images/banner.png')] bg-cover bg-center min-h-[30vh] flex justify-center items-center text-white bg-[#03071280] flex-col gap-3">
                 <h1 class="font-bold text-3xl md:text-8xl text-center px-4 raleway">End-to-End Travel with <span class="text-[#1DD100]">Pictro Travels</span></h1>
@@ -112,7 +112,7 @@
                         </div>
                         <img src="images/cupon-devider.png" alt="">
                         <div class="p-6 grid grid-flow-row items-center justify-center content-center">
-                            <p class=" text-[#030712] text-2xl font-bold raleway">Couple 20</p>
+                            <p class=" text-[#030712] text-2xl font-bold raleway">COUPLE20</p>
                             <p class="text-[#03071280] text-sm">Coupon Code</p>
                         </div>
                     </div>
@@ -137,10 +137,10 @@
                                     <p class="text-[#03071280] text-sm  raleway">Coach-009-WEB ! AC_Business</p>
                                 </div>
                             </div>
-                            <a class="btn bg-[#1DD10026] text-[#1DD100] ml-auto flex items-center gap-2 px-4 py-2 rounded-md">
-                                <img src="images/bus-icon.png" alt="Bus Icon" class="h-4">
-                                <span>40</span> Seat Left
-                            </a>
+                            <div class="bg-[#1DD10026] text-[#1DD100] font-semibold ml-auto flex items-center gap-2 px-4 py-2 rounded-md">
+                              <img src="images/seat-green.png" alt="Bus Icon" >
+                              <span id="total-seat">40</span> Seat Left
+                            </div>
                         </div>
                         <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-start p-4">
                             <p>Route</p>
@@ -244,7 +244,7 @@
                         <!-- ticket price section -->
                         <div class="bg-[#F7F8F8] rounded-xl">
                             <div class="overflow-x-auto">
-                                <table class="table text-center">
+                                <table id="table" class="table text-center">
                                   <!-- head -->
                                   <thead>
                                     <tr>
@@ -253,25 +253,20 @@
                                       <th>Price</th>
                                     </tr>
                                   </thead>
-                                  <tbody>
+                                  <tbody id="table-body">
                                     <!-- row 1 -->
-                                    <tr>
-                                      <td>A1</td>
-                                      <td>Economy</td>
-                                      <td>550</td>
-                                    </tr>
                                   </tbody>
                                 </table>
                                 <div class="flex justify-between my-4 mx-11">
                                     <p>Total Price</p>
-                                    <p>BDT <span>550</span></p>
+                                    <p>BDT <span id="total-price">0</span></p>
                                 </div>
-                                <div class="flex justify-center">
-                                    <input class="px-7 rounded-lg" type="text" placeholder="Have you any coupon?"> <button class="btn bg-[#1DD100] text-white px-8">Apply</button>
+                                <div id="Coupon-input" class="flex justify-center hidden">
+                                    <input id="input-field" class="px-7 rounded-lg" type="text" placeholder="Have you any coupon?"> <button id="coupon-btn"  class="btn bg-[#1DD100] text-white px-8">Apply</button>
                                 </div>
                                 <div class="flex justify-between my-4 mx-11">
                                     <p>Grand Total</p>
-                                    <p>BDT <span>550</span></p>
+                                    <p>BDT <span id="grand-total">00</span></p>
                                 </div>
                               </div>
                         </div>
@@ -280,10 +275,10 @@
                             <p class="text-[#030712] font-semibold">Passenger Name*</p>
                             <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="text" placeholder="Enter Your Nmae">
                             <p class="text-[#030712] font-semibold">Phone Number*</p>
-                            <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="number" placeholder="Enter Your Phone number">
+                            <input id="phone-num" class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="number" placeholder="Enter Your Phone number">
                             <p class="text-[#030712] font-semibold">Email id</p>
                             <input class="py-2 px-4 my-2 w-full  border-2 border-[#0307121A] rounded-lg" type="email" placeholder="Enter Your Email">
-                            <button class="btn w-full bg-[#1DD100] text-white px-8">Next</button>
+                            <button id="next-btn" onclick="actionNextBtn()" class="btn w-full bg-[#1DD100] text-white px-8 hidden">Next</button>
                         </div>
                     </div>
                  </div>
@@ -292,7 +287,7 @@
          
     </main>
     <!-- footer section -->
-    <footer class="footer bg-[#030712] flex flex-col justify-center items-center text-base-content  py-12">
+    <footer id="footer" class="footer bg-[#030712] flex flex-col justify-center items-center text-base-content  py-12">
         <!-- Upper Section -->
         <div class="w-4/5 h-auto flex flex-col md:flex-row justify-between items-center pb-6 border-dotted border-b-2 border-[#FFFFFF4D]">
           <aside class="flex flex-col text-center md:text-left">
@@ -324,7 +319,20 @@
             <button class="text-white hover:underline">Privacy Policy</button>
           </div>
         </div>
-      </footer>
+    </footer>
+
+    <!-- Succes section -->
+     <div id="success-section" class="grid-cols-1  justify-items-center py-40 hidden">
+      <img src="images/success.png" alt="">
+      <h2 class="raleway text-[#27AE60] text-2xl font-bold uppercase my-5">Success</h2>
+      <p class="raleway font-semibold text-center my-3">Thank you for Booking Our Bus Seats.<br> We are working hard to find the best service and deals for you.</p>
+      <p class="text-[#4A4A4A] raleway">Shortly you will find a confirmation in your email.</p>
+      <button onclick="continueBtn()" class="btn bg-[#27AE60] text-xl text-white rounded-full w-60 mt-4">Continue</button>
+     </div>
       
+
+      <!-- js link -->
+       <!-- <script src="js/index.js"></script> -->
+       <script src="js/comon.js"></script>
 </body>
 </html>
